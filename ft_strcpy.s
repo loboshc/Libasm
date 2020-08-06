@@ -13,6 +13,7 @@ _while:
 	jmp _while
 
 _return:
+	mov byte[rdi + rcx], 0
 	mov rax, rdi
 	ret
 	 
