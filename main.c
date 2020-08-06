@@ -128,9 +128,9 @@ int main()
 	char *s2;
 	
 	s1 = strdup(src);
-	//s2 = ft_strdup(src);
+	s2 = ft_strdup(src);
 	printf("O: %s\n", s1);
-	printf("M: %s\n", ft_strdup(src));
+	printf("M: %s\n", s2);
 
 
 	return (0);
