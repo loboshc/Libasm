@@ -1,19 +1,16 @@
-global _ft_strdup
+  global _ft_strdup
 
 extern _malloc
 extern _ft_strcpy
+extern _ft_strlen
 
 segment .text
 
 _ft_strdup:
 	push rdi
-_len:
-	cmp BYTE [rdi],0
-	je _copy
-	inc rax
-	inc rdi
-	jmp _len
-_copy:
+	cmp rdi, 0
+	jz _error
+	call _ft_strlen
 	add rax, 1
 	mov rdi, rax
 	call _malloc

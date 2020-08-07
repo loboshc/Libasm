@@ -6,7 +6,7 @@
 #    By: dlobos-m <dlobos-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/31 12:53:05 by dlobos-m          #+#    #+#              #
-#    Updated: 2020/08/06 10:27:22 by dlobos-m         ###   ########.fr        #
+#    Updated: 2020/08/07 12:11:13 by dlobos-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ SRCS = ft_strlen.s ft_strcpy.s ft_strcmp.s ft_read.s ft_write.s ft_strdup.s
 
 OBJS = $(SRCS:%.s=%.o)
 %.o: %.s
-	nasm -f macho64 -o $@ $<
-	
+	nasm -f macho64 $<
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -27,5 +26,8 @@ clean:
 fclean: clean
 	rm $(NAME)
 re: fclean all
-
-.PHONY: all re clean fclean
+test: $(NAME)
+	gcc -Wall -Werror -Wextra -L. -lasm main.c 
+	./a.out
+	rm ./a.out
+.PHONY: all re clean fclean test
