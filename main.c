@@ -6,7 +6,7 @@
 /*   By: dlobos-m <dlobos-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/29 09:18:21 by dlobos-m          #+#    #+#             */
-/*   Updated: 2020/08/07 12:00:30 by dlobos-m         ###   ########.fr       */
+/*   Updated: 2020/08/07 12:19:15 by dlobos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,16 @@ int main()
 	d = "M: Esto es una prueba de la funcion write\n";
 	write(1, s, strlen(s));
 	ft_write(1, d, strlen(d));
-	s = "O: Esto es una prueba mas larga y completa de la funcion write asdasdasasdadfdfsdfsdffsdfsdfsdfsdfsds\n";
-	d = "M: Esto es una prueba mas larga y completa de la funcion write asdasdasasdadfdfsdfsdffsdfsdfsdfsdfsds\n";
+	s = "O: Esto es una prueba mas larga y completa de la funcion write asdasdasasdadfdfsdfsdffsdfsdfsdfsdfsdssajkbdnsabjndjksahdjksahdjksahdjksahdjsajdhjksaddhsajkdhsajkdh\n";
+	d = "M: Esto es una prueba mas larga y completa de la funcion write asdasdasasdadfdfsdfsdffsdfsdfsdfsdfsdssajkbdnsabjndjksahdjksahdjksahdjksahdjsajdhjksaddhsajkdhsajkdh\n";
 	write(1, s, strlen(s));
 	ft_write(1, d, strlen(d));
 	s = "O:\n";
 	d = "M:\n";
 	write(1, s, strlen(s));
 	ft_write(1, d, strlen(d));
+	write(1, NULL, 10);
+	ft_write(1, NULL, 10);
 	s = "Esto es una prueba de ft_write en archivo\n";
 	len = ft_strlen(s);
 	if ((fd = open("test_write.txt", O_WRONLY | O_APPEND)) < 0)
@@ -94,12 +96,15 @@ int main()
 	printf("Pruebas strlen\n");
 	printf("-------------------------------------\n");
 	
-	s = "Probando strlen \0 \0";
+	s = "Probando strlen klsaklsadjklsadkñlsadklsdaklsadklñsadjklsadhjsdajklhjsadjh\0 \0";
 	printf("O: %lu\n", strlen(s));
 	printf("M: %lu\n", ft_strlen(s));
 	printf("O: %lu\n", strlen(c));
 	printf("M: %lu\n", ft_strlen(c));
 	s = "";
+	printf("O: %lu\n", strlen(s));
+	printf("M: %lu\n", ft_strlen(s));
+	s = NULL;
 	printf("O: %lu\n", strlen(s));
 	printf("M: %lu\n", ft_strlen(s));
 
@@ -142,7 +147,6 @@ int main()
 	printf("M: %s\n", s2);
 	free(s1);
 	free(s2);
-
 
 	return (0);
 }
