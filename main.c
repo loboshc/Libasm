@@ -6,7 +6,7 @@
 /*   By: dlobos-m <dlobos-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/29 09:18:21 by dlobos-m          #+#    #+#             */
-/*   Updated: 2020/08/07 12:19:15 by dlobos-m         ###   ########.fr       */
+/*   Updated: 2021/01/22 14:43:46 by dlobos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,9 +102,6 @@ int main()
 	printf("O: %lu\n", strlen(c));
 	printf("M: %lu\n", ft_strlen(c));
 	s = "";
-	printf("O: %lu\n", strlen(s));
-	printf("M: %lu\n", ft_strlen(s));
-	s = NULL;
 	printf("O: %lu\n", strlen(s));
 	printf("M: %lu\n", ft_strlen(s));
 

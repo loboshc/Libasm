@@ -1,2 +1,2 @@
 
-
+Esto es una prueba de ft_write en archivo

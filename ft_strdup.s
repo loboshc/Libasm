@@ -9,7 +9,7 @@ segment .text
 _ft_strdup:
 	push rdi
 	cmp rdi, 0
-	jz _error
+	je _error
 	call _ft_strlen
 	add rax, 1
 	mov rdi, rax
